@@ -1,0 +1,98 @@
+.topbarContainer{
+
+    display: flex;
+    width: 100%;
+    height: 50px;
+    top: 0;
+     position: sticky;   /*  This for making the topbar sticky when user scroll with top 0    */
+    background-color: #1875f2;
+    align-items: center;
+    z-index: 999;
+}
+
+.topbarLeft{
+ flex:3;        /*this flex means dividing the container here we have divided into 12 parts      */
+}
+
+
+.topbarCenter{
+    flex:5;
+
+}
+.searchbar{
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 30px;
+   background-color: white;
+   border-radius: 30px;
+}
+.SearchIcon{
+    font-size: 20px !important;
+    margin-left: 10px;
+}
+.searchInput{
+    border: none;
+    width: 70%;
+
+}
+
+ .searchInput:focus{      /* focus helps when you click on the input tag     */
+    outline: none;
+}
+
+.topbarRight{
+    flex:4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+
+}
+.topbarLink{
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.topbarIcons{
+    display: flex;
+}
+.topbarIconItem{
+    cursor: pointer;
+    position: relative;
+    margin-right: 15px;
+}
+.topbarIconBadge{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 12px;
+
+}
+
+.topbarImg{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.logo{
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
