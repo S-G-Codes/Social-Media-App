@@ -7,6 +7,8 @@ const morgan = require("morgan");
 const userRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
+const conversationsRoute = require('./routes/conversations');
+const messageRoute = require('./routes/messages');
 const multer  = require("multer");
 const path = require("path");
 
@@ -68,6 +70,8 @@ app.get("/",(req , res)=>{
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
+app.use("/api/conversations", conversationsRoute);
+app.use("/api/messages", messageRoute);
 
 
 //listening our app at port 8000

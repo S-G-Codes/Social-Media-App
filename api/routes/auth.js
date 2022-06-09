@@ -6,6 +6,14 @@ const bcrypt = require("bcrypt");
 router.post("/register",    async (req , res)=>{
 
   try {
+   
+   const userExits = await User.findOne({email : req.body.email});
+  if(userExits){
+    res.status(404).json("Sorry User with this Mail Exits!")
+  }
+
+
+
     //Incrypting the new password by using bcrypt
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password,salt);
